@@ -81,7 +81,8 @@ class _MyHomePageState extends State<MyHomePage> {
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
         // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Colors.blue[350],
+        //Theme.of(context).colorScheme.inversePrimary,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
@@ -106,11 +107,18 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have clicked the button this many times:',
+              'It Grows...',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            Container(
+              color: Colors.pink,
+              width: _counter.toDouble(),
+              height: _counter.toDouble(),
+              child: Center(
+                child: Text(
+                '$_counter',
+                style: Theme.of(context).textTheme.headlineMedium,
+                ),
+              ),
             ),
           ],
         ),
